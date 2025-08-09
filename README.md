@@ -1,0 +1,1 @@
+Projeto desenvolvido através do curso inicial da Asimov: do zero ao primeiro projeto. Consiste em buscar dados dos livros mais vendidos na Amazon e suas reviews, pelo Kaggle, e organizando através do Pandas, Streamlit e gerando gráficos com o Plotly.
