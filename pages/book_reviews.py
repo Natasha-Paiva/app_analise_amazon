@@ -13,6 +13,7 @@ books = df_top100_books["book title"].unique()
 book = st.sidebar.selectbox("Escolha um livro", books)
 
 df_book = df_top100_books[df_top100_books["book title"] == book]
+# filtrando os nomes dos livros, para não haver duplicatas
 df_reviews_filtered = df_reviews[df_reviews["book name"] == book]
 
 book_title = df_book["book title"].iloc[0]
@@ -27,7 +28,9 @@ st.write(f"**Preço:** ${book_price:.2f}")
 st.write(f"**Avaliação:** {book_rating}/5")
 st.write(f"**Ano de Publicação:** {book_year}")
 
-st.write("---")
+# adicionando uma linha de "divisão"
+st.divider()
+
 for _, review in df_reviews_filtered.iterrows():
     st.write(f"**Usuário:** {review['reviewer']}")
     st.write(f"**Título:** {review['review title']}")
